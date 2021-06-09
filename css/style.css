@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Montserrat:wght@300&family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: black;
+    /* margin: 0px 20px; */
+    /* height: 44px; */
+    padding: 12px;
+}
+.logo-img{
+    max-width: 40px;
+    filter: invert(100%);
+}
+.logo-img:hover{
+    opacity: .4;
+    transition: all 100ms ease-in-out 200ms;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    padding: 0px 20px;
+    list-style: none;
+}
+ul li a{
+    font-family: 'Baloo 2', cursive;
+
+}
+.dribbble-img{
+    /* border: 2px solid white;
+    border-radius: 20px; */
+    display: block;
+    margin: auto;
+}
+.link{
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: rgb(231, 218, 218);
+}
+.title{
+    margin: 20px 0px;
+}
+.title-link{
+    text-decoration: none;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    border: 2px dashed white;
+    padding: 5px;
+    border-radius: 30px;
+    
+}
+
+.title-link:hover {
+    background-color: white;
+    color: black;
+    transition: all 250ms ease-in-out;
+}
+
+.image{
+    position: relative;
+    width: 300px;
+}
+
+.image__img{
+    display: block;
+    width: 100%;
+}
+
+.image__overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* this way our main content doesn't get displayed only the image is visible */
+    transition: opacity 250ms;
+}
+
+.image__overlay--blur{
+    backdrop-filter: blur(5px);
+}
+.image__overlay--primary{
+    background-color: #2541b2;
+}
+.image__overlay:hover{
+    opacity: 1;
+}
+.linkt{
+    margin-top: 20px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+.linkt:hover{
+    color: rgb(216, 202, 202);
+}
+.image__overlay > * {
+    /* targetting every child directly in this case it has only two title and description*/
+    transform: translateY(20px);
+    transition: transform 250ms;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0px);
+}
+
+
+
+.image__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.image__description{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.25em;
+    margin-top: 0.75em;
+    text-align: center;
+}
+
+.container{
+   padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #deedf0;
+}
+.item{
+    width: 302px;
+    height: 299px;
+}
+
+.second{
+    background-color: #dbe6fd;
+}
+.item-1{
+    height: 300px;
+    width: 300px;
+    /* border: 2px solid black; */
+    padding: 12px;
+}
+.web{
+    text-align: center;
+    font-size: 2.25em;
+}
+.text-left{
+    padding-left: 12px;
+    text-align: left;
+}
+
+.web1{
+    opacity: 0.3;
+}
+
+.text-img{
+    position: absolute;
+    right: 36px;
+    top: 133px;
+    font-size: 41px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+}
+
+.text-img1{
+    position: absolute;
+    top: 133px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: blue;
+}
+
+.grid{
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: 4fr 4fr; */
+    /* justify-content: space-around; */
+    /* background-color: #ff96ad; */
+    background-color: powderblue;
+    grid-gap: 20px;
+
+    grid-template-areas: 
+    "first first second second"
+    "first first second second";
+}
+.grid-img{
+    display: block;
+    width: 20%;
+    margin: auto;
+}
+.item-2{
+    padding: 30px;
+    /* border: 2px solid black; */
+}
+#first-grid{
+    background-color: #00ead3;
+    grid-area: first;
+}
+#second-grid{
+    background-color: #caf7e3;
+    grid-area: second;
+}
+#second-grid h2{
+    font-family: 'Source Code Pro', monospace;
+}
+#second-grid h3{
+    font-family: 'Source Code Pro', monospace;
+}
+.h-tr{
+font-size: 1.5em;
+}
+.g1{
+    text-align: center;
+    font-size: 1.35em;
+}
+
+.text-center{
+    text-align: center;
+    font-size: 2.25em;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.grid-text{
+    font-size: 1.25em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+li{
+    list-style: none;
+}
+
+.container-js{
+    display: inline;
+    height: 50px;
+}
+.effect{
+    
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.last{
+    font-size: 20px;
+    font-family: 'Mate SC', serif;
+}
+.social-img{
+    width: 30px;
+    filter: invert(100%);
+    padding: 0px 12px;
+}
+
+footer div{
+    line-height: 2.2    ;
+}
+
+.l-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bdr{
+    border-right: 2px solid white;
+    font-size: 2.1em;
+}
+.bdr1{
+    border-right: 2px solid white;
+}
+
+@media (max-width: 1075px){
+    .grid{
+        grid-template-areas: 
+        "first first first first"
+        "second second second second";
+    }
+    .text-center{
+        font-size: 3.25em;
+    }
+    .h-tr{
+        font-size: 2.5em;
+    }
+    .grid-text{
+        font-size: 2.25em;
+    }
+    .link{
+        font-size: 1.25em;
+    }
+}
+
+
+@media screen and (max-width:1400px){
+    .logo{
+       display: flex; 
+       justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
